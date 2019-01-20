@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
-	<title>Some Title</title>
+	<title>Shachar Bachar</title>
 </head>
 <body>
 
@@ -20,16 +20,19 @@
 	<!--navigation panel-->
 	<div class="panel-right">
 		<div class="grey-box">
-			<div class="button">
-				<a href="#" id="architect" class="used">
+			<a id="architect" class="used">
+				<div class="button btn-1 active">
+				<!--<a href="#" id="architect" class="used">-->
 					<span>אדריכלות</span>
-					<img src="images/section_arrow.png" class="arrow-1 chosen" alt=""></a>
-			</div>
-			<div class="button btn-2">
-				<a href="#" id="internal-design">
+					<img src="images/section_arrow.png" class="arrow-1 chosen" alt="">
+				</div>
+			</a>
+			<a href="#" id="internal-design">
+				<div class="button btn-2">
 					<span>עיצוב פנים</span>
-					<img src="images/section_arrow.png" class="arrow-2 unchosen" alt=""></a>
-			</div>
+					<img src="images/section_arrow.png" class="arrow-2 unchosen" alt="">
+				</div>
+			</a>
 		</div>
 
 	</div>
@@ -101,21 +104,25 @@ $(document).ready(function ($) {
 		navText: ['קודם','הבא']
 	});
 
-	$('#architect').click(function(){
+	$('.btn-1').click(function(){
 		$('#internal-design').removeClass('used');+
 		$('#architect').addClass('used');
 		$('.slide-1').attr('src','images/slider-1.png');
 		$('.slide-2').attr('src','images/slider-2.png');
 		$('.arrow-1').addClass('chosen').removeClass('unchosen');
 		$('.arrow-2').removeClass('chosen').addClass('unchosen');
+		$('.btn-1').addClass('active');
+        $('.btn-2').removeClass('active');
 	});
-	$('#internal-design').click(function(){
+	$('.btn-2').click(function(){
 		$('#architect').removeClass('used');
 		$('#internal-design').addClass('used');
 		$('.slide-1').attr('src','images/slider-3.png');
 		$('.slide-2').attr('src','images/slider-4.png');
 		$('.arrow-1').removeClass('chosen').addClass('unchosen');
 		$('.arrow-2').removeClass('unchosen').addClass('chosen');
+        $('.btn-2').addClass('active');
+        $('.btn-1').removeClass('active');
 
 	});
 	$('.owl-nav').appendTo('body');
@@ -124,12 +131,26 @@ $(document).ready(function ($) {
 	$('.owl-nav').wrap('<div class="grey-wrap"></div>');
 	$('.grey-wrap').append('<div class="details"><a href="#">פרטים +</a></div>');
 
-	$(window).resize(function(){
-		if ($(window).width() <= 1024){
-			$('.info').appendTo('.slider-top');
-		}
-	});
+    checkPosition();
+    window.addEventListener('resize', checkPosition);
 });
+function checkPosition() {
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+        $('.info').css('position','absolute').insertAfter('.panel-right');
+    } else {
+       //
+    }
+
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+        $('.info').css('position','relative').insertBefore('.form');
+        $('.owl-nav').appendTo('.slider-top');
+
+    } else {
+        //
+    }
+}
+
+
 </script>
 
 </body>
