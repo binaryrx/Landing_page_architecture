@@ -119,8 +119,7 @@ $(document).ready(function ($) {
 		startPosition:'right'
 
 	});
-	$('.slider-top .slider').on('changed.owl.carousel', function(property)
-	{
+	$('.slider-top .slider').on('changed.owl.carousel', function(property) {
 
 			var text = $(".slider-top .slider .active .text").text();
 			if($('.btn-2').hasClass('active')){
@@ -134,6 +133,12 @@ $(document).ready(function ($) {
 			// });0
 	});
 
+	$('.house-info').animate({opacity:0},250,function(){
+		$('.house-info').animate({opacity:1},500);
+	});
+
+
+	$('.house-info').toggleClass('show').insertAfter('.slider-top');
 	$('.btn-1').click(function(e){
 		$('#internal-design').removeClass('used');+
 		$('#architect').addClass('used');
@@ -188,6 +193,12 @@ $(document).ready(function ($) {
     window.addEventListener('resize', checkPosition);
     $('.details-btn').click(function(){
     	$('.house-info').toggleClass('show').insertAfter('.slider-top');
+    	$('.plus').html('-');
+    	if($('.house-info').hasClass('show')){
+			$('.plus').html('-');
+		}else{
+			$('.plus').html('+');
+		} ;
 	});
 
 	$("#send_btn").on("click", function(e){

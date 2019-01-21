@@ -118,6 +118,13 @@ a:visited{
 .alert{
   display:none;
 }
+p.alert {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 
 .sticky{
   box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);

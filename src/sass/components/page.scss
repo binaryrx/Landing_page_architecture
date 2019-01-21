@@ -206,7 +206,7 @@ section.slider-top{
       cursor:pointer;
     }
       .house-info{
-        display: none;
+        //display: none;
       }
       .show{
         display: block
@@ -299,6 +299,7 @@ section.form{
   text-align: -webkit-auto;
   padding: 10px;
   z-index: 99999;
+
   max-width: 83.8%;
 }
 div.info{
@@ -831,6 +832,7 @@ div.info{
     font-size: 16px;
     font-weight: 400;
     width: 80%;
+    transition: 0.5s ease-in;
     font-family: Rubik;
   }
   .btn-submit{
