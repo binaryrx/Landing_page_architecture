@@ -52,10 +52,24 @@
 	<div class="slider">
 		<div class="item">
 			<img src="images/slider-1.png" alt="" class="slide-1">
+			<div class="text" style="display: none">בית במרכז הארץ, סגנון ירושלמי
+				שטח מגרש: 750 מ”ר
+				שטח בנוי: 600 מ”ר
+				צלם: שי אפשטיין</div>
 
+			<div class="text-2" style="display: none">פנטהאוז בתל אביב, סגנון אורבני אקלקטי
+				שטח בנוי: 400 מ”ר
+				צלם: שי אפשטיין
+			</div>
 		</div>
 		<div class="item">
 			<img src="images/slider-1.png" alt="" class="slide-2">
+			<div class="text" style="display: none">פנטהאוז בתל אביב, סגנון אורבני אקלקטי
+				שטח בנוי: 400 מ”ר
+				צלם: שי אפשטיין</div>
+			<div class="text-2" style="display: none">בית במרכז הארץ, סגנון ירושלמי
+				שטח מגרש: 750 מ”ר
+				שטח בנוי: 600 מ”ר
 			</div>
 		</div>
 </section>
@@ -69,14 +83,15 @@
 		<div role="form" class="wpcf7" id="wpcf7-f336-p337-o1" lang="en-US" dir="ltr">
 			<div class="screen-reader-response"></div>
 			<form action="/" method="post" class="contact-form" novalidate="novalidate">
-				<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+				<span class="wpcf7-form-control-wrap your-name"><input type="text" id="f_name" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
 																	   aria-required="true" aria-invalid="false" placeholder="שם:"></span>
-				<span class="wpcf7-form-control-wrap tel-19"><input type="tel" name="tel-19" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
+				<span class="wpcf7-form-control-wrap tel-19"><input type="tel" id="f_tel" name="tel-19" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
 																	aria-invalid="false" placeholder="טלפון:"></span>
-				<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+				<span class="wpcf7-form-control-wrap your-email"><input type="email" id="f_email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
 																		aria-required="true" aria-invalid="false" placeholder="אימייל:"></span>
-				<input type="submit" value="שלח" class="wpcf7-form-control wpcf7-submit btn-submit"><span class="ajax-loader"></span>
+				<input type="submit" id="send_btn" value="שלח" class="wpcf7-form-control wpcf7-submit btn-submit"><span class="ajax-loader"></span>
 				<div class="wpcf7-response-output wpcf7-display-none"></div>
+				<p class="alert">קיימת שגיאה בשדה אחד או יותר</p>
 			</form>
 		</div>
 		<p class="form-p smaller">"Keep Your eyes on the stars, and your feet on the ground" // Thedore Roosevelt</p>
@@ -103,12 +118,31 @@ $(document).ready(function ($) {
 		autoplayHoverPause: false,
 		navText: ['קודם','הבא']
 	});
+	$('.slider-top .slider').on('changed.owl.carousel', function(property)
+	{
+
+			var text = $(".slider-top .slider .active .text").text();
+			if($('.btn-2').hasClass('active')){
+				text = 	$(".slider-top .slider .active .text-2").text();
+			};
+			// console.log(text);
+
+			// $(".bottom .text-box").fadeOut(function(){
+				$(".house-info").text(text);
+				// $(".bottom .text-box").fadeIn();
+			// });
+
+
+	});
 
 	$('.btn-1').click(function(){
 		$('#internal-design').removeClass('used');+
 		$('#architect').addClass('used');
-		$('.slide-1').attr('src','images/slider-1.png');
-		$('.slide-2').attr('src','images/slider-2.png');
+		$('.owl-stage-outer').animate({opacity:0},250,function(){
+			$('.slide-1').attr('src','images/slider-1.png');
+			$('.slide-2').attr('src','images/slider-2.png');
+			$('.owl-stage-outer').animate({opacity:1},500);
+		});
 		$('.arrow-1').addClass('chosen').removeClass('unchosen');
 		$('.arrow-2').removeClass('chosen').addClass('unchosen');
 		$('.btn-1').addClass('active');
@@ -117,8 +151,11 @@ $(document).ready(function ($) {
 	$('.btn-2').click(function(){
 		$('#architect').removeClass('used');
 		$('#internal-design').addClass('used');
+		$('.owl-stage-outer').animate({opacity:0},250,function(){
 		$('.slide-1').attr('src','images/slider-3.png');
 		$('.slide-2').attr('src','images/slider-4.png');
+			$('.owl-stage-outer').animate({opacity:1},500);
+		});
 		$('.arrow-1').removeClass('chosen').addClass('unchosen');
 		$('.arrow-2').removeClass('unchosen').addClass('chosen');
         $('.btn-2').addClass('active');
@@ -129,10 +166,34 @@ $(document).ready(function ($) {
 	$('.owl-next').prepend('<img src="images/arrow-right.png" />');
 	$('.owl-prev').append('<img src="images/arrow-right.png" class="fliped"/>');
 	$('.owl-nav').wrap('<div class="grey-wrap"></div>');
-	$('.grey-wrap').append('<div class="details"><a href="#">פרטים +</a></div>');
+	$('.grey-wrap').append('<div class="details">' +
+			'<button class="details-btn"><span class="hide">פרטים</span> +</button><div class="house-info">בית במרכז הארץ, סגנון ירושלמי\n' +
+			'שטח מגרש: 750 מ”ר\n' +
+			'שטח בנוי: 600 מ”ר\n' +
+			'צלם: שי אפשטיין</div></div>');
 
     checkPosition();
     window.addEventListener('resize', checkPosition);
+    $('.details-btn').click(function(){
+    	$('.house-info').toggleClass('show').insertAfter('.details');
+	});
+
+	$("#send_btn").on("click", function(e){
+		e.preventDefault();
+		$("#alert").remove();
+		if(validate())
+		{
+			console.log("cool");
+			$(".alert").css("display", "none");
+			sendToMail();
+
+		}
+		else
+		{
+			$(".alert").css("display", "block");
+		}
+	});
+
 });
 function checkPosition() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
@@ -144,12 +205,64 @@ function checkPosition() {
     if (window.matchMedia('(max-width: 1024px)').matches) {
         $('.info').css('position','relative').insertBefore('.form');
         $('.owl-nav').appendTo('.slider-top');
+        $('.details').insertAfter('.owl-stage-outer');
 
     } else {
         //
     }
 }
+window.onresize = function(){ location.reload(); }
 
+function sendToMail() {
+	var form_data = {
+		name: $("#f_name").val(),
+		tel: $("#f_tel").val(),
+		mail: $("#f_email").val()
+	};
+
+	$.ajax({
+		type: 'POST',
+		url: 'process.php',
+		data: form_data,
+
+		success: function(data) {
+			var url = 'thankyou.html';
+			window.location = url;
+			console.log(data);
+		},
+		error: function(data){
+			console.log(data);
+		}
+	});
+}
+function validate()
+{
+	var valid = true;
+
+	namev = $("#f_name").val();
+	telv = $("#f_tel").val();
+	emailv = $("#f_email").val();
+
+	$("input").removeClass("invalid");
+
+	if(namev.length < 3)
+	{
+		$("#f_name").addClass("invalid");
+		valid = false;
+	}
+	if(emailv.length < 3)
+	{
+		$("#f_email").addClass("invalid");
+		valid = false;
+	}
+	if(telv.length < 8)
+	{
+		$("#f_tel").addClass("invalid");
+		valid = false;
+	}
+
+	return valid;
+}
 
 </script>
 
