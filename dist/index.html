@@ -17,7 +17,9 @@
 		<img src="images/logo.png" alt="">
 	</div>
 </header>
+
 <section class="slider-top container">
+	<div class="mobile-nav"></div>
 	<!--navigation panel-->
 	<div class="panel-right">
 		<div class="grey-box">
@@ -25,13 +27,13 @@
 				<div class="button btn-1 active">
 				<!--<a href="#" id="architect" class="used">-->
 					<span>אדריכלות</span>
-					<img src="images/section_arrow.png" class="arrow-1 chosen" alt="">
+					<img src="images/section_arrow.png" class="arrow arrow-1 chosen" alt="">
 				</div>
 			</a>
 			<a href="#" id="internal-design">
 				<div class="button btn-2">
 					<span>עיצוב פנים</span>
-					<img src="images/section_arrow.png" class="arrow-2 unchosen" alt="">
+					<img src="images/section_arrow.png" class="arrow arrow-2 unchosen" alt="">
 				</div>
 			</a>
 		</div>
@@ -52,26 +54,22 @@
 	<!--slider-->
 	<div class="slider">
 		<div class="item">
-			<img src="images/slider-1.png" alt="" class="slide-1">
-			<div class="text" style="display: none">בית במרכז הארץ, סגנון ירושלמי
-				שטח מגרש: 750 מ”ר
-				שטח בנוי: 600 מ”ר
-				צלם: שי אפשטיין</div>
-
-			<div class="text-2" style="display: none">פנטהאוז בתל אביב, סגנון אורבני אקלקטי
-				שטח בנוי: 400 מ”ר
-				צלם: שי אפשטיין
-			</div>
+			<img src="images/architect/1.jpg" alt="" class="slide-1">
 		</div>
 		<div class="item">
-			<img src="images/slider-1.png" alt="" class="slide-2">
-			<div class="text" style="display: none">פנטהאוז בתל אביב, סגנון אורבני אקלקטי
-				שטח בנוי: 400 מ”ר
-				צלם: שי אפשטיין</div>
-			<div class="text-2" style="display: none">בית במרכז הארץ, סגנון ירושלמי
-				שטח מגרש: 750 מ”ר
-				שטח בנוי: 600 מ”ר
-			</div>
+			<img src="images/architect/2.jpg" alt="" class="slide-2">
+		</div>
+		<div class="item">
+			<img src="images/architect/3.jpg" alt="" class="slide-3">
+		</div>
+		<div class="item">
+			<img src="images/architect/4.jpg" alt="" class="slide-4">
+		</div>
+		<div class="item">
+			<img src="images/architect/5.jpg" alt="" class="slide-5">
+		</div>
+		<div class="item">
+			<img src="images/architect/6.jpg" alt="" class="slide-6">
 		</div>
 </section>
 
@@ -117,58 +115,71 @@ $(document).ready(function ($) {
 		dots: false,
 		autoplay: true,
 		autoplayHoverPause: false,
-		navText: ['קודם','הבא']
+		navText: ['הבא','קודם'],
+		startPosition:'right'
+
 	});
 	$('.slider-top .slider').on('changed.owl.carousel', function(property)
 	{
 
 			var text = $(".slider-top .slider .active .text").text();
 			if($('.btn-2').hasClass('active')){
-				text = 	$(".slider-top .slider .active .text-2").text();
+				// text = 	$(".slider-top .slider .active .text-2").text();
 			};
 			// console.log(text);
 
 			// $(".bottom .text-box").fadeOut(function(){
-				$(".house-info").text(text);
+			// 	$(".house-info").text(text);
 				// $(".bottom .text-box").fadeIn();
-			// });
-
-
+			// });0
 	});
 
-	$('.btn-1').click(function(){
+	$('.btn-1').click(function(e){
 		$('#internal-design').removeClass('used');+
 		$('#architect').addClass('used');
 		$('.owl-stage-outer').animate({opacity:0},250,function(){
-			$('.slide-1').attr('src','images/slider-1.png');
-			$('.slide-2').attr('src','images/slider-2.png');
+			$('.slide-1').attr('src','images/architect/1.jpg');
+			$('.slide-2').attr('src','images/architect/2.jpg');
+			$('.slide-3').attr('src','images/architect/3.jpg');
+			$('.slide-4').attr('src','images/architect/4.jpg');
+			$('.slide-5').attr('src','images/architect/5.jpg');
+			$('.slide-6').attr('src','images/architect/6.jpg');
 			$('.owl-stage-outer').animate({opacity:1},500);
 		});
 		$('.arrow-1').addClass('chosen').removeClass('unchosen');
 		$('.arrow-2').removeClass('chosen').addClass('unchosen');
 		$('.btn-1').addClass('active');
         $('.btn-2').removeClass('active');
+		e.preventDefault();
 	});
-	$('.btn-2').click(function(){
+	$('.btn-2').click(function(e){
 		$('#architect').removeClass('used');
 		$('#internal-design').addClass('used');
 		$('.owl-stage-outer').animate({opacity:0},250,function(){
-		$('.slide-1').attr('src','images/slider-3.png');
-		$('.slide-2').attr('src','images/slider-4.png');
+			$('.slide-1').attr('src','images/interior/a.jpg');
+			$('.slide-2').attr('src','images/interior/b.jpg');
+			$('.slide-3').attr('src','images/interior/c.jpg');
+			$('.slide-4').attr('src','images/interior/d.jpg');
+			$('.slide-5').attr('src','images/interior/e.jpg');
+			$('.slide-6').attr('src','images/interior/f.jpg');
 			$('.owl-stage-outer').animate({opacity:1},500);
 		});
 		$('.arrow-1').removeClass('chosen').addClass('unchosen');
 		$('.arrow-2').removeClass('unchosen').addClass('chosen');
         $('.btn-2').addClass('active');
         $('.btn-1').removeClass('active');
-
+		e.preventDefault();
 	});
+	$('.carousel-control').click(function (e) {
+		e.preventDefault();
+	});
+
 	$('.owl-nav').appendTo('body');
-	$('.owl-next').prepend('<img src="images/arrow-right.png" />');
-	$('.owl-prev').append('<img src="images/arrow-right.png" class="fliped"/>');
+	$('.owl-next').append('<img src="images/arrow-right.png" class="fliped"/>');
+	$('.owl-prev').prepend('<img src="images/arrow-right.png" />');
 	$('.owl-nav').wrap('<div class="grey-wrap"></div>');
 	$('.grey-wrap').append('<div class="details">' +
-			'<button class="details-btn"><span class="hide">פרטים</span> +</button><div class="house-info">בית במרכז הארץ, סגנון ירושלמי\n' +
+			'<button class="details-btn"><span class="hide">פרטים</span> <span class="plus">+</span></button><div class="house-info">בית במרכז הארץ, סגנון ירושלמי\n' +
 			'שטח מגרש: 750 מ”ר\n' +
 			'שטח בנוי: 600 מ”ר\n' +
 			'צלם: שי אפשטיין</div></div>');
@@ -176,7 +187,7 @@ $(document).ready(function ($) {
     checkPosition();
     window.addEventListener('resize', checkPosition);
     $('.details-btn').click(function(){
-    	$('.house-info').toggleClass('show').insertAfter('.details');
+    	$('.house-info').toggleClass('show').insertAfter('.slider-top');
 	});
 
 	$("#send_btn").on("click", function(e){
@@ -206,13 +217,15 @@ function checkPosition() {
     if (window.matchMedia('(max-width: 1024px)').matches) {
         $('.info').css('position','relative').insertBefore('.form');
         $('.owl-nav').appendTo('.slider-top');
-        $('.details').insertAfter('.owl-stage-outer');
+        $('.details').appendTo('.mobile-nav');
+        $('.button').appendTo('.mobile-nav');
+
 
     } else {
         //
     }
 }
-window.onresize = function(){ location.reload(); }
+// window.onresize = function(){ location.reload(); }
 
 function sendToMail() {
 	var form_data = {

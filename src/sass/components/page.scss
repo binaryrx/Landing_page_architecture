@@ -1,3 +1,31 @@
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+
+@mixin f-light {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+@mixin f-regular {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+@mixin f-medium {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+@mixin f-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+/* /Fonts */
+
+
+
 header{
   .logo{
     margin:45px auto;
@@ -115,7 +143,7 @@ section.slider-top{
   width: 250px;
   background: #e9eaec;
   position: absolute;
-  top: 46%;
+  top: 40.3%;
   left: 8.1%;
 
   .owl-nav{
@@ -136,19 +164,21 @@ section.slider-top{
     }
     .owl-prev{
       display:inline-block;
-      float:left;
+      float:right;
       padding-left: 30px;
       img{
-        padding-left:20px;
+        padding-left: 10px;
+        margin-right: 10px;
       }
     }
 
     .owl-next{
       display:inline-block;
-      float:right;
+      float:left;
       padding-right: 30px;
       img{
-        padding-left:20px;
+        padding-left: 10px;
+        margin-left: 10px;
       }
     }
     .fliped{
@@ -191,7 +221,7 @@ section.form{
   background-image: url('../images/form-bg.png');
   img{
     position: absolute;
-    top: 71%;
+    top: 67.5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -208,6 +238,7 @@ section.form{
       font-size:18px;
       //font-weight:bold;
       font-weight:500;
+      font-family:Rubik,sans-serif;
     }
     .bigger{
       font-size:24px;
@@ -258,17 +289,22 @@ section.form{
   display: none;
 }
 .show{
-  display: inline-block;
+  display: block;
   position: relative;
-  margin-top: 10px;
-  left: 0.5%;
+  /* left: 0.5%; */
   height: 110px;
-  width: 240px;
-  background: #e9eaec;
+  width: 84%;
+  margin: 0 auto;
+  background: lightgrey;
   text-align: -webkit-auto;
   padding: 10px;
-  top: 100%;
   z-index: 99999;
+  max-width: 83.8%;
+}
+div.info{
+  div{
+    font-family:Rubik,sans-serif;
+  }
 }
 
 
@@ -290,6 +326,10 @@ section.form{
 
 }
 @media screen and (max-width:1800px){
+  .show{
+    width: 100%;
+    max-width: 88.9%;
+  }
   section.slider-top{
     div.panel-right{
       right:5%;
@@ -316,7 +356,11 @@ section.form{
     left:4%;
   }
 }
+@media screen and (max-width:1700px){.show{max-width: 92%}}
 @media screen and (max-width:1660px){
+  .show{
+    max-width: 96%;
+  }
   section.slider-top{
     div.panel-right{
       right:1.5%;
@@ -330,6 +374,9 @@ section.form{
   }
 }
 @media screen and (max-width:1600px){
+  .show{
+    max-width: 100%;
+  }
   section.slider-top{
     div.panel-right{
       right:0%;
@@ -343,6 +390,10 @@ section.form{
   }
 }
 @media screen and (max-width:1550px){
+  .show{
+    max-width: 96%;
+    //margin-top:20px;
+  }
   .owl-carousel .owl-item img{
     width:90% !important;
     margin:0 auto;
@@ -360,7 +411,7 @@ section.form{
   }
   .grey-wrap{
     left:2%;
-    top: 44.5%;
+    top: 38.5%;
     height:250px;
   }
   section.form img {
@@ -387,7 +438,7 @@ section.form{
   }
   .grey-wrap{
     left:0.5%;
-    top: 44.5%;
+    top: 38.5%;
     height:250px;
   }
 
@@ -399,7 +450,7 @@ section.form{
     margin:0 auto;
   }
   .grey-wrap{
-    top:40%;
+    top: 37.5%;
   }
 
 
@@ -410,7 +461,7 @@ section.form{
     margin:0 auto;
   }
   .grey-wrap{
-    top:39%;
+    top: 35.7%;
   }
   section.form img {
     top:68%;
@@ -418,6 +469,9 @@ section.form{
 
 }
 @media screen and (max-width:1360px){
+  section.slider-top .info img {
+    width:30%;
+  }
   .owl-carousel .owl-item img{
     width:78% !important;
     margin:0 auto;
@@ -429,7 +483,7 @@ section.form{
   }
 
   .grey-wrap{
-    top:38%;
+    top: 34.2%;
   }
   section.form img {
     top:66.5%;
@@ -441,15 +495,25 @@ section.form{
     margin:0 auto;
   }
   .grey-wrap{
-    top:37%;
+    top: 33%;
   }
 }@media screen and (max-width:1280px){
+  section.slider-top .info img {
+    width:25%;
+  }
+  section.slider-top .info div {
+    float: left;
+    display: inline;
+    width: 365px;
+    padding-top: 6%;
+    padding-right: 20px;
+  }
   .owl-carousel .owl-item img{
     width:72% !important;
     margin:0 auto;
   }
   .grey-wrap{
-    top:36%;
+    top: 32.5%;
   }
   section.form img {
     top:65%;
@@ -461,7 +525,7 @@ section.form{
     margin:0 auto;
   }
   .grey-wrap{
-    top:35%;
+    top:30%;
   }
 }
 
@@ -483,7 +547,7 @@ section.form{
   }
 
   .grey-wrap{
-    top:35%;
+    top:33%;
   }
   section.form img {
     top:66%;
@@ -491,6 +555,9 @@ section.form{
 }
 
 @media screen and (max-width:1150px){
+  section.slider-top div.info img {
+    width: 20%;
+  }
   .owl-carousel .owl-item img{
     width:75% !important;
     margin:0 auto;
@@ -516,6 +583,9 @@ section.form{
     }
   }
 }
+  .grey-wrap{
+    top:27.8%;
+  }
   section.form img {
     top:62%;
   }
@@ -549,6 +619,7 @@ section.form{
   }
 }
 @media screen and(max-width: 1100px){
+
   .owl-carousel .owl-item img{
     width:70% !important;
     margin:0 auto;
@@ -574,7 +645,7 @@ section.form{
     }
   }
   .grey-wrap{
-    top:32%;
+    top:26%;
   }
   section.form img {
     top:62%;
@@ -585,9 +656,28 @@ section.form{
 
 //Mobile design
 @media screen and(max-width: 1024px){
+  .mobile-nav {
+    .btn-1{
+      span{
+      }
+    }
+    .btn-2{
+      //margin-right: -650px;
+      span{
+      }
+    }
+    .active{
+      background:lightgrey;
+      span{
+      }
+    }
+  }
+  .arrow{
+    display: none;
+  }
   .container{
     .logo{
-      margin-bottom:100px;
+      margin-bottom:30px;
     }
   }
   .owl-carousel .owl-item img{
@@ -598,13 +688,18 @@ section.form{
     display:none;
   }
   .details{
-    position: absolute;
-    top:0;
-    left:0;
+    position: relative;
+    align-self:flex-end;
+
     .details-btn{
       background: #e9eaec;
       border:none;
       outline:none;
+      width: 50px;
+      height: 50px;
+      font-weight: bold;
+      font-size: 30px;
+
     }
   }
   section.slider-top{
@@ -625,6 +720,7 @@ section.form{
               .chosen{
                 transform:rotate(270deg);
                 padding:0px 0px;
+                display: none;
               }
             }
           .active{
@@ -653,7 +749,7 @@ section.form{
       float: left;
       height: auto;
       padding-right: 10px;
-      width: 23%;
+      width: 20%;
       margin-top: 2%;
       margin-left: 2%;
     }
@@ -695,7 +791,7 @@ section.form{
     text-align: center;
     display: inline-block;
     .owl-next {
-      right: 4%;
+      left: 4%;
       position: absolute;
       top: 31%;
       z-index: 99999;
@@ -705,11 +801,14 @@ section.form{
       img{
         padding-left:10%;
       }
+      img.fliped {
+        transform: rotate(180deg);
+      }
     }
     .owl-prev {
       position: absolute;
       top: 31%;
-      left: 4%;
+      right: 4%;
       padding: 10px;
       z-index: 99999;
       width:110px;
@@ -724,9 +823,15 @@ section.form{
   }
   .house-info{
     position: absolute;
-    top:6%;
-    left:1%;
-    z-index:99999;
+    top: 11%;
+    right: 10%;
+    z-index: 99999;
+    -webkit-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+    font-family: Rubik;
   }
   .btn-submit{
     margin-right:3%;
@@ -737,6 +842,22 @@ section.form{
   section.form img {
     top:71.5%;
   }
+  .mobile-nav {
+    .btn-1{
+      span{
+      }
+    }
+    .btn-2{
+      margin-left: -450px;
+      span{
+      }
+    }
+    .active{
+      background:lightgrey;
+      span{
+      }
+    }
+  }
   .owl-nav{
     .owl-prev {
       top: 31%;
@@ -746,7 +867,13 @@ section.form{
     }
   }
 }
-
+@media screen and(max-width:992px) {
+  .house-info {
+    top: 11%;
+    right: 17.5%;
+    width: 65%;
+  }
+}
 
 @media screen and(max-width:950px){
   section.form img {
@@ -778,6 +905,27 @@ section.form{
   section.form img {
     top:64.5%;
   }
+  .house-info {
+    top: 13%;
+    right: 20%;
+    width: 60%;
+  }
+  .mobile-nav {
+    .btn-1{
+      span{
+      }
+    }
+    .btn-2{
+      margin-left: -250px;
+      span{
+      }
+    }
+    .active{
+      background:lightgrey;
+      span{
+      }
+    }
+  }
 }
 @media screen and(max-width:750px){
   div.info div {
@@ -807,8 +955,11 @@ section.form{
     text-align: center;
 
   }
+  .mobile-nav .active span {
+    //font-size:22px;
+  }
   section.slider-top div.panel-right .grey-box a .button span{
-    font-size:18px;
+    //font-size:18px;
 
   }
   section.slider-top div.panel-right .grey-box a .button img{
@@ -835,8 +986,8 @@ section.form{
   }
   .house-info{
     position: absolute;
-    top:10%;
-    left:1%;
+    //top:10%;
+    //left:1%;
     z-index:99999;
   }
   .owl-nav{
@@ -854,6 +1005,29 @@ section.form{
   }
 }
 @media screen and(max-width:500px){
+  span.plus{
+    bottom: 7px;
+  }
+
+  .mobile-nav .btn-1{
+    margin-top: 5%;
+    padding: 1% 5px 5px;
+  }
+  .mobile-nav .btn-2{
+    margin-top: 5%;
+    padding: 1% 5px 5px;
+    //margin-right: -200px;
+  }
+  .mobile-nav .active span {
+    //font-size:18px;
+  }
+  .details .details-btn {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+  }
+
   section.form{
    margin-top: 50px;
     img {
@@ -869,6 +1043,32 @@ section.form{
        width:80%;
      }
     }
+  }
+  .mobile-nav {
+    .btn-1{
+      span{
+      }
+    }
+    .btn-2{
+      margin-left: -150px;
+      span{
+      }
+    }
+    .active{
+      background:lightgrey;
+      span{
+      }
+    }
+  }
+
+  .details{
+    top: 12%;
+    left: unset;
+    right:0;
+  }
+  .house-info{
+    //top: 26%;
+    //right: 0;
   }
   section.slider-top{
     div.panel-right{
@@ -890,13 +1090,32 @@ section.form{
   }
   .owl-nav{
     .owl-prev {
-      top: 22%;
+      top: 25%;
     }
     .owl-next{
-      top:22%
+      top:25%
     }
   }
 }@media screen and(max-width:380px){
+  .mobile-nav {
+    .btn-1{
+      span{
+      }
+    }
+    .btn-2{
+      margin-left: -100px;
+      span{
+      }
+    }
+    .active{
+      background:lightgrey;
+      span{
+      }
+    }
+  }
+  .mobile-nav .active span {
+    font-size:16px;
+  }
   header{
     .logo{
      img{
@@ -921,5 +1140,13 @@ section.form{
   }
   section.form img {
     top:60.5%;
+  }
+  .owl-nav{
+    .owl-prev {
+      top: 22%;
+    }
+    .owl-next{
+      top:22%
+    }
   }
 }

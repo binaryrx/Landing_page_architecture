@@ -10,12 +10,18 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
 /* /Fonts */
 /* Global */
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
 /* line 2, src/sass/components/_reset.scss */
 html {
   margin: 0 !important;
 }
 
 /* line 5, src/sass/components/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Rubik,sans-serif;
+}
+
+/* line 8, src/sass/components/_reset.scss */
 body {
   position: relative;
   margin: 0;
@@ -26,31 +32,36 @@ body {
   color: #232323;
 }
 
-/* line 14, src/sass/components/_reset.scss */
+/* line 18, src/sass/components/_reset.scss */
 a {
   text-decoration: none;
   color: #333333 !important;
 }
 
-/* line 18, src/sass/components/_reset.scss */
+/* line 22, src/sass/components/_reset.scss */
 .slider {
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 
-/* line 22, src/sass/components/_reset.scss */
+/* line 26, src/sass/components/_reset.scss */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   direction: rtl;
 }
 
-/* line 27, src/sass/components/_reset.scss */
+/* line 31, src/sass/components/_reset.scss */
 p {
   margin: 0;
 }
 
-/* line 30, src/sass/components/_reset.scss */
+/* line 34, src/sass/components/_reset.scss */
+div {
+  font-family: Rubik,sans-serif;
+}
+
+/* line 37, src/sass/components/_reset.scss */
 ul {
   -webkit-padding-start: 0;
   list-style: none;
@@ -58,7 +69,12 @@ ul {
   padding: 0;
 }
 
-/* line 36, src/sass/components/_reset.scss */
+/* line 43, src/sass/components/_reset.scss */
+input {
+  font-family: Rubik,sans-serif !important;
+}
+
+/* line 46, src/sass/components/_reset.scss */
 section {
   width: 100%;
   max-width: 1920px;
@@ -66,81 +82,145 @@ section {
   overflow: hidden;
 }
 
-/* line 42, src/sass/components/_reset.scss */
+/* line 52, src/sass/components/_reset.scss */
 a:active, a:hover, a:visited {
   text-decoration: none;
   color: black;
 }
 
-/* line 47, src/sass/components/_reset.scss */
+/* line 57, src/sass/components/_reset.scss */
 .section-inner {
   max-width: 1250px;
   padding: 0 10px;
   width: 100%;
 }
 
-/* line 52, src/sass/components/_reset.scss */
+/* line 62, src/sass/components/_reset.scss */
 .thanks {
   padding: 30px;
   font-weight: bold;
 }
 
-/* line 56, src/sass/components/_reset.scss */
+/* line 66, src/sass/components/_reset.scss */
+.owl-wrapper-outer {
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 69, src/sass/components/_reset.scss */
+span.plus {
+  -webkit-transform: translateY(-82%);
+          transform: translateY(-82%);
+  bottom: 2px;
+  right: -1px;
+  position: relative;
+}
+
+/* line 75, src/sass/components/_reset.scss */
+.mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  max-width: 100%;
+}
+
+/* line 82, src/sass/components/_reset.scss */
+.mobile-nav .btn-1 {
+  background: #e9eaec;
+  padding: 5px 10px 0 10px;
+}
+
+/* line 86, src/sass/components/_reset.scss */
+.mobile-nav .btn-1 span {
+  font-size: 16px;
+}
+
+/* line 90, src/sass/components/_reset.scss */
+.mobile-nav .btn-2 {
+  background: #e9eaec;
+  padding: 5px 10px 0 10px;
+  margin-left: -650px;
+}
+
+/* line 95, src/sass/components/_reset.scss */
+.mobile-nav .btn-2 span {
+  font-size: 16px;
+}
+
+/* line 99, src/sass/components/_reset.scss */
+.mobile-nav .active {
+  background: lightgrey;
+}
+
+/* line 109, src/sass/components/_reset.scss */
 .img-thanks {
   top: 85% !important;
 }
 
-/* line 59, src/sass/components/_reset.scss */
+/* line 112, src/sass/components/_reset.scss */
 a {
   color: #333333;
 }
 
-/* line 62, src/sass/components/_reset.scss */
+/* line 115, src/sass/components/_reset.scss */
 a:visited {
   color: #333333;
 }
 
-/* line 65, src/sass/components/_reset.scss */
+/* line 118, src/sass/components/_reset.scss */
 .alert {
   display: none;
 }
 
-/* line 69, src/sass/components/_reset.scss */
+/* line 122, src/sass/components/_reset.scss */
 .sticky {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
           box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
 }
 
-/* line 72, src/sass/components/_reset.scss */
+/* line 125, src/sass/components/_reset.scss */
 .mobile {
   display: none;
 }
 
+/* line 128, src/sass/components/_reset.scss */
+.form-title {
+  font-family: Rubik,sans-serif;
+}
+
 @media screen and (max-width: 1000px) {
-  /* line 76, src/sass/components/_reset.scss */
+  /* line 132, src/sass/components/_reset.scss */
   .mobile {
     display: block;
   }
-  /* line 79, src/sass/components/_reset.scss */
+  /* line 135, src/sass/components/_reset.scss */
   .desktop {
     display: none;
   }
 }
 
-/* line 2, src/sass/components/page.scss */
+/* Fonts */
+/* /Fonts */
+/* line 30, src/sass/components/page.scss */
 header .logo {
   margin: 45px auto;
   text-align: center;
 }
 
-/* line 10, src/sass/components/page.scss */
+/* line 38, src/sass/components/page.scss */
 section.slider-top div.panel-right {
   position: absolute;
   top: 15%;
   right: 8%;
 }
 
-/* line 14, src/sass/components/page.scss */
+/* line 42, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box {
   background: #e9eaec;
   height: 300px;
@@ -152,7 +232,7 @@ section.slider-top div.panel-right .grey-box {
   transition: 0.5s ease-in;
 }
 
-/* line 23, src/sass/components/page.scss */
+/* line 51, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .button {
   background: #e9eaec;
   padding: 7% 6%;
@@ -166,29 +246,29 @@ section.slider-top div.panel-right .grey-box a .button {
   cursor: pointer;
 }
 
-/* line 34, src/sass/components/page.scss */
+/* line 62, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .button span {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* line 38, src/sass/components/page.scss */
+/* line 66, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .button img {
   vertical-align: baseline;
   padding-right: 23%;
 }
 
-/* line 42, src/sass/components/page.scss */
+/* line 70, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .button .chosen {
   display: inline-block;
 }
 
-/* line 45, src/sass/components/page.scss */
+/* line 73, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .button .unchosen {
   display: none;
 }
 
-/* line 49, src/sass/components/page.scss */
+/* line 77, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .active {
   background: #ffffff !important;
   width: 320px;
@@ -196,24 +276,24 @@ section.slider-top div.panel-right .grey-box a .active {
   cursor: pointer;
 }
 
-/* line 56, src/sass/components/page.scss */
+/* line 84, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a a:hover {
   color: black;
   text-decoration: none;
 }
 
-/* line 61, src/sass/components/page.scss */
+/* line 89, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .used {
   background: white;
 }
 
-/* line 67, src/sass/components/page.scss */
+/* line 95, src/sass/components/page.scss */
 section.slider-top div.panel-right .grey-box a .btn-2 {
   margin-top: 100px;
   background: #e9eaec;
 }
 
-/* line 75, src/sass/components/page.scss */
+/* line 103, src/sass/components/page.scss */
 section.slider-top .info {
   position: absolute;
   top: 36%;
@@ -224,13 +304,13 @@ section.slider-top .info {
   padding: 20px 0 20px 20px;
 }
 
-/* line 83, src/sass/components/page.scss */
+/* line 111, src/sass/components/page.scss */
 section.slider-top .info img {
   float: right;
   padding: 2px;
 }
 
-/* line 87, src/sass/components/page.scss */
+/* line 115, src/sass/components/page.scss */
 section.slider-top .info div {
   float: left;
   display: inline;
@@ -239,27 +319,27 @@ section.slider-top .info div {
   padding-right: 20px;
 }
 
-/* line 93, src/sass/components/page.scss */
+/* line 121, src/sass/components/page.scss */
 section.slider-top .info div strong {
   display: block;
   font-size: 24px;
   font-weight: bold;
 }
 
-/* line 98, src/sass/components/page.scss */
+/* line 126, src/sass/components/page.scss */
 section.slider-top .info div p {
   display: block;
   font-size: 16px;
   font-weight: 500;
 }
 
-/* line 113, src/sass/components/page.scss */
+/* line 141, src/sass/components/page.scss */
 .grey-wrap {
   height: 270px;
   width: 250px;
   background: #e9eaec;
   position: absolute;
-  top: 46%;
+  top: 40.3%;
   left: 8.1%;
   /*.owl-nav:hover{
     color:white;
@@ -270,7 +350,7 @@ section.slider-top .info div p {
   }*/
 }
 
-/* line 121, src/sass/components/page.scss */
+/* line 149, src/sass/components/page.scss */
 .grey-wrap .owl-nav {
   width: 300px;
   height: 100px;
@@ -283,44 +363,46 @@ section.slider-top .info div p {
   font-weight: bold;
 }
 
-/* line 133, src/sass/components/page.scss */
+/* line 161, src/sass/components/page.scss */
 .grey-wrap .owl-nav .owl-prev, .grey-wrap .owl-nav .owl-next {
   -webkit-transform: translateY(125%);
           transform: translateY(125%);
   cursor: pointer;
 }
 
-/* line 137, src/sass/components/page.scss */
+/* line 165, src/sass/components/page.scss */
 .grey-wrap .owl-nav .owl-prev {
   display: inline-block;
-  float: left;
+  float: right;
   padding-left: 30px;
 }
 
-/* line 141, src/sass/components/page.scss */
+/* line 169, src/sass/components/page.scss */
 .grey-wrap .owl-nav .owl-prev img {
-  padding-left: 20px;
+  padding-left: 10px;
+  margin-right: 10px;
 }
 
-/* line 146, src/sass/components/page.scss */
+/* line 175, src/sass/components/page.scss */
 .grey-wrap .owl-nav .owl-next {
   display: inline-block;
-  float: right;
+  float: left;
   padding-right: 30px;
 }
 
-/* line 150, src/sass/components/page.scss */
+/* line 179, src/sass/components/page.scss */
 .grey-wrap .owl-nav .owl-next img {
-  padding-left: 20px;
+  padding-left: 10px;
+  margin-left: 10px;
 }
 
-/* line 154, src/sass/components/page.scss */
+/* line 184, src/sass/components/page.scss */
 .grey-wrap .owl-nav .fliped {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 167, src/sass/components/page.scss */
+/* line 197, src/sass/components/page.scss */
 .grey-wrap .details {
   position: absolute;
   bottom: 10%;
@@ -328,7 +410,7 @@ section.slider-top .info div p {
   z-index: 99999;
 }
 
-/* line 172, src/sass/components/page.scss */
+/* line 202, src/sass/components/page.scss */
 .grey-wrap .details .details-btn {
   font-weight: bold;
   border: none;
@@ -336,17 +418,17 @@ section.slider-top .info div p {
   cursor: pointer;
 }
 
-/* line 178, src/sass/components/page.scss */
+/* line 208, src/sass/components/page.scss */
 .grey-wrap .details .house-info {
   display: none;
 }
 
-/* line 181, src/sass/components/page.scss */
+/* line 211, src/sass/components/page.scss */
 .grey-wrap .details .show {
   display: block;
 }
 
-/* line 186, src/sass/components/page.scss */
+/* line 216, src/sass/components/page.scss */
 section.form {
   margin-top: 100px;
   width: 100%;
@@ -355,17 +437,17 @@ section.form {
   background-image: url("../images/form-bg.png");
 }
 
-/* line 192, src/sass/components/page.scss */
+/* line 222, src/sass/components/page.scss */
 section.form img {
   position: absolute;
-  top: 71%;
+  top: 67.5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: -1;
 }
 
-/* line 200, src/sass/components/page.scss */
+/* line 230, src/sass/components/page.scss */
 section.form div.form-box h2 {
   font-size: 36px;
   font-weight: 500;
@@ -374,29 +456,30 @@ section.form div.form-box h2 {
   padding: 15px 35px;
 }
 
-/* line 207, src/sass/components/page.scss */
+/* line 237, src/sass/components/page.scss */
 section.form div.form-box p {
   font-size: 18px;
   font-weight: 500;
+  font-family: Rubik,sans-serif;
 }
 
-/* line 212, src/sass/components/page.scss */
+/* line 243, src/sass/components/page.scss */
 section.form div.form-box .bigger {
   font-size: 24px;
 }
 
-/* line 215, src/sass/components/page.scss */
+/* line 246, src/sass/components/page.scss */
 section.form div.form-box .smaller {
   font-size: 18px;
   margin: 50px 0;
 }
 
-/* line 220, src/sass/components/page.scss */
+/* line 251, src/sass/components/page.scss */
 section.form div.form-box .contact-form span {
   margin: 1%;
 }
 
-/* line 223, src/sass/components/page.scss */
+/* line 254, src/sass/components/page.scss */
 section.form div.form-box .contact-form span input {
   padding: 15px;
   font-weight: bold;
@@ -405,7 +488,7 @@ section.form div.form-box .contact-form span input {
   border: none;
 }
 
-/* line 233, src/sass/components/page.scss */
+/* line 264, src/sass/components/page.scss */
 section.form div.form-box .contact-form input {
   padding: 15px 70px;
   font-weight: bold;
@@ -416,434 +499,500 @@ section.form div.form-box .contact-form input {
   color: black;
 }
 
-/* line 244, src/sass/components/page.scss */
+/* line 275, src/sass/components/page.scss */
 section.form div.form-box .contact-form .btn-submit {
   color: white;
 }
 
-/* line 247, src/sass/components/page.scss */
+/* line 278, src/sass/components/page.scss */
 section.form div.form-box .contact-form input:hover {
   background: white;
   color: black;
 }
 
-/* line 257, src/sass/components/page.scss */
+/* line 288, src/sass/components/page.scss */
 .house-info {
   display: none;
 }
 
-/* line 260, src/sass/components/page.scss */
+/* line 291, src/sass/components/page.scss */
 .show {
-  display: inline-block;
+  display: block;
   position: relative;
-  margin-top: 10px;
-  left: 0.5%;
+  /* left: 0.5%; */
   height: 110px;
-  width: 240px;
-  background: #e9eaec;
+  width: 84%;
+  margin: 0 auto;
+  background: lightgrey;
   text-align: -webkit-auto;
   padding: 10px;
-  top: 100%;
   z-index: 99999;
+  max-width: 83.8%;
+}
+
+/* line 305, src/sass/components/page.scss */
+div.info div {
+  font-family: Rubik,sans-serif;
 }
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1850px) {
-  /* line 279, src/sass/components/page.scss */
+  /* line 315, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     right: 6.5%;
   }
-  /* line 282, src/sass/components/page.scss */
+  /* line 318, src/sass/components/page.scss */
   section.slider-top div.info {
     right: 6.5%;
     padding: 5px;
   }
-  /* line 287, src/sass/components/page.scss */
+  /* line 323, src/sass/components/page.scss */
   .grey-wrap {
     left: 7%;
   }
 }
 
 @media screen and (max-width: 1800px) {
-  /* line 294, src/sass/components/page.scss */
+  /* line 329, src/sass/components/page.scss */
+  .show {
+    width: 100%;
+    max-width: 88.9%;
+  }
+  /* line 334, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     right: 5%;
   }
-  /* line 297, src/sass/components/page.scss */
+  /* line 337, src/sass/components/page.scss */
   section.slider-top div.info {
     right: 5%;
   }
-  /* line 301, src/sass/components/page.scss */
+  /* line 341, src/sass/components/page.scss */
   .grey-wrap {
     left: 5.5%;
   }
 }
 
 @media screen and (max-width: 1750px) {
-  /* line 307, src/sass/components/page.scss */
+  /* line 347, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     right: 3.7%;
   }
-  /* line 310, src/sass/components/page.scss */
+  /* line 350, src/sass/components/page.scss */
   section.slider-top div.info {
     right: 4%;
   }
-  /* line 315, src/sass/components/page.scss */
+  /* line 355, src/sass/components/page.scss */
   .grey-wrap {
     left: 4%;
   }
 }
 
+@media screen and (max-width: 1700px) {
+  /* line 359, src/sass/components/page.scss */
+  .show {
+    max-width: 92%;
+  }
+}
+
 @media screen and (max-width: 1660px) {
-  /* line 321, src/sass/components/page.scss */
+  /* line 361, src/sass/components/page.scss */
+  .show {
+    max-width: 96%;
+  }
+  /* line 365, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     right: 1.5%;
   }
-  /* line 324, src/sass/components/page.scss */
+  /* line 368, src/sass/components/page.scss */
   section.slider-top div.info {
     right: 1.5%;
   }
-  /* line 328, src/sass/components/page.scss */
+  /* line 372, src/sass/components/page.scss */
   .grey-wrap {
     left: 2%;
   }
 }
 
 @media screen and (max-width: 1600px) {
-  /* line 334, src/sass/components/page.scss */
+  /* line 377, src/sass/components/page.scss */
+  .show {
+    max-width: 100%;
+  }
+  /* line 381, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     right: 0%;
   }
-  /* line 337, src/sass/components/page.scss */
+  /* line 384, src/sass/components/page.scss */
   section.slider-top div.info {
     right: 0%;
   }
-  /* line 341, src/sass/components/page.scss */
+  /* line 388, src/sass/components/page.scss */
   .grey-wrap {
     left: 0%;
   }
 }
 
 @media screen and (max-width: 1550px) {
-  /* line 346, src/sass/components/page.scss */
+  /* line 393, src/sass/components/page.scss */
+  .show {
+    max-width: 96%;
+  }
+  /* line 397, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 90% !important;
     margin: 0 auto;
   }
-  /* line 351, src/sass/components/page.scss */
+  /* line 402, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     top: 13%;
     right: 2.3%;
     height: 290px;
   }
-  /* line 356, src/sass/components/page.scss */
+  /* line 407, src/sass/components/page.scss */
   section.slider-top div.info {
     top: 35.5%;
     right: 2.3%;
   }
-  /* line 361, src/sass/components/page.scss */
+  /* line 412, src/sass/components/page.scss */
   .grey-wrap {
     left: 2%;
-    top: 44.5%;
+    top: 38.5%;
     height: 250px;
   }
-  /* line 366, src/sass/components/page.scss */
+  /* line 417, src/sass/components/page.scss */
   section.form img {
     top: 69%;
   }
 }
 
 @media screen and (max-width: 1500px) {
-  /* line 372, src/sass/components/page.scss */
+  /* line 423, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 90% !important;
     margin: 0 auto;
   }
-  /* line 377, src/sass/components/page.scss */
+  /* line 428, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     top: 13%;
     right: 0.5%;
     height: 290px;
   }
-  /* line 382, src/sass/components/page.scss */
+  /* line 433, src/sass/components/page.scss */
   section.slider-top div.info {
     top: 35.5%;
     right: 0.5%;
     padding: 2px 0 2px 20px;
   }
-  /* line 388, src/sass/components/page.scss */
+  /* line 439, src/sass/components/page.scss */
   .grey-wrap {
     left: 0.5%;
-    top: 44.5%;
+    top: 38.5%;
     height: 250px;
   }
 }
 
 @media screen and (max-width: 1450px) {
-  /* line 397, src/sass/components/page.scss */
+  /* line 448, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 87% !important;
     margin: 0 auto;
   }
-  /* line 401, src/sass/components/page.scss */
+  /* line 452, src/sass/components/page.scss */
   .grey-wrap {
-    top: 40%;
+    top: 37.5%;
   }
 }
 
 @media screen and (max-width: 1420px) {
-  /* line 408, src/sass/components/page.scss */
+  /* line 459, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 82% !important;
     margin: 0 auto;
   }
-  /* line 412, src/sass/components/page.scss */
+  /* line 463, src/sass/components/page.scss */
   .grey-wrap {
-    top: 39%;
+    top: 35.7%;
   }
-  /* line 415, src/sass/components/page.scss */
+  /* line 466, src/sass/components/page.scss */
   section.form img {
     top: 68%;
   }
 }
 
 @media screen and (max-width: 1360px) {
-  /* line 421, src/sass/components/page.scss */
+  /* line 472, src/sass/components/page.scss */
+  section.slider-top .info img {
+    width: 30%;
+  }
+  /* line 475, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 78% !important;
     margin: 0 auto;
   }
-  /* line 426, src/sass/components/page.scss */
+  /* line 480, src/sass/components/page.scss */
   section.slider-top div.info {
     top: 35.5%;
   }
-  /* line 431, src/sass/components/page.scss */
+  /* line 485, src/sass/components/page.scss */
   .grey-wrap {
-    top: 38%;
+    top: 34.2%;
   }
-  /* line 434, src/sass/components/page.scss */
+  /* line 488, src/sass/components/page.scss */
   section.form img {
     top: 66.5%;
   }
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 439, src/sass/components/page.scss */
+  /* line 493, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 75% !important;
     margin: 0 auto;
   }
-  /* line 443, src/sass/components/page.scss */
+  /* line 497, src/sass/components/page.scss */
   .grey-wrap {
-    top: 37%;
+    top: 33%;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  /* line 447, src/sass/components/page.scss */
+  /* line 501, src/sass/components/page.scss */
+  section.slider-top .info img {
+    width: 25%;
+  }
+  /* line 504, src/sass/components/page.scss */
+  section.slider-top .info div {
+    float: left;
+    display: inline;
+    width: 365px;
+    padding-top: 6%;
+    padding-right: 20px;
+  }
+  /* line 511, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 72% !important;
     margin: 0 auto;
   }
-  /* line 451, src/sass/components/page.scss */
+  /* line 515, src/sass/components/page.scss */
   .grey-wrap {
-    top: 36%;
+    top: 32.5%;
   }
-  /* line 454, src/sass/components/page.scss */
+  /* line 518, src/sass/components/page.scss */
   section.form img {
     top: 65%;
   }
 }
 
 @media screen and (max-width: 1250px) {
-  /* line 459, src/sass/components/page.scss */
+  /* line 523, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 67% !important;
     margin: 0 auto;
   }
-  /* line 463, src/sass/components/page.scss */
+  /* line 527, src/sass/components/page.scss */
   .grey-wrap {
-    top: 35%;
+    top: 30%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 469, src/sass/components/page.scss */
+  /* line 533, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 75% !important;
     margin: 0 auto;
   }
-  /* line 474, src/sass/components/page.scss */
+  /* line 538, src/sass/components/page.scss */
   section.slider-top div.info {
     top: 35.5%;
   }
-  /* line 476, src/sass/components/page.scss */
+  /* line 540, src/sass/components/page.scss */
   section.slider-top div.info img {
     width: 25%;
   }
-  /* line 479, src/sass/components/page.scss */
+  /* line 543, src/sass/components/page.scss */
   section.slider-top div.info div {
     padding-top: 4%;
   }
-  /* line 485, src/sass/components/page.scss */
+  /* line 549, src/sass/components/page.scss */
   .grey-wrap {
-    top: 35%;
+    top: 33%;
   }
-  /* line 488, src/sass/components/page.scss */
+  /* line 552, src/sass/components/page.scss */
   section.form img {
     top: 66%;
   }
 }
 
 @media screen and (max-width: 1150px) {
-  /* line 494, src/sass/components/page.scss */
+  /* line 558, src/sass/components/page.scss */
+  section.slider-top div.info img {
+    width: 20%;
+  }
+  /* line 561, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 75% !important;
     margin: 0 auto;
   }
-  /* line 500, src/sass/components/page.scss */
+  /* line 567, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box {
     padding-top: 20%;
   }
-  /* line 503, src/sass/components/page.scss */
+  /* line 570, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     padding-right: 10%;
   }
-  /* line 508, src/sass/components/page.scss */
+  /* line 575, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info {
     top: 35.5%;
   }
-  /* line 510, src/sass/components/page.scss */
+  /* line 577, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info img {
     width: 25%;
   }
-  /* line 513, src/sass/components/page.scss */
+  /* line 580, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info div {
     padding-top: 4%;
   }
-  /* line 519, src/sass/components/page.scss */
+  /* line 586, src/sass/components/page.scss */
+  .grey-wrap {
+    top: 27.8%;
+  }
+  /* line 589, src/sass/components/page.scss */
   section.form img {
     top: 62%;
   }
 }
 
 @media screen and (max-width: 1120px) {
-  /* line 531, src/sass/components/page.scss */
+  /* line 601, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     padding-right: 5%;
   }
-  /* line 536, src/sass/components/page.scss */
+  /* line 606, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info {
     top: 35.5%;
   }
-  /* line 538, src/sass/components/page.scss */
+  /* line 608, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info img {
     width: 25%;
   }
-  /* line 541, src/sass/components/page.scss */
+  /* line 611, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info div {
     padding-top: 4%;
   }
-  /* line 547, src/sass/components/page.scss */
+  /* line 617, src/sass/components/page.scss */
   section.form img {
     top: 64%;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  /* line 552, src/sass/components/page.scss */
+  /* line 623, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 70% !important;
     margin: 0 auto;
   }
-  /* line 560, src/sass/components/page.scss */
+  /* line 631, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     padding-right: 2%;
   }
-  /* line 565, src/sass/components/page.scss */
+  /* line 636, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info {
     top: 35.5%;
   }
-  /* line 567, src/sass/components/page.scss */
+  /* line 638, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info img {
     width: 25%;
   }
-  /* line 570, src/sass/components/page.scss */
+  /* line 641, src/sass/components/page.scss */
   section.slider-top div.panel-right div.info div {
     padding-top: 4%;
   }
-  /* line 576, src/sass/components/page.scss */
+  /* line 647, src/sass/components/page.scss */
   .grey-wrap {
-    top: 32%;
+    top: 26%;
   }
-  /* line 579, src/sass/components/page.scss */
+  /* line 650, src/sass/components/page.scss */
   section.form img {
     top: 62%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 589, src/sass/components/page.scss */
-  .container .logo {
-    margin-bottom: 100px;
+  /* line 669, src/sass/components/page.scss */
+  .mobile-nav .active {
+    background: lightgrey;
   }
-  /* line 593, src/sass/components/page.scss */
+  /* line 675, src/sass/components/page.scss */
+  .arrow {
+    display: none;
+  }
+  /* line 679, src/sass/components/page.scss */
+  .container .logo {
+    margin-bottom: 30px;
+  }
+  /* line 683, src/sass/components/page.scss */
   .owl-carousel .owl-item img {
     width: 100% !important;
     margin: 0 auto;
   }
-  /* line 597, src/sass/components/page.scss */
+  /* line 687, src/sass/components/page.scss */
   .hide {
     display: none;
   }
-  /* line 600, src/sass/components/page.scss */
+  /* line 690, src/sass/components/page.scss */
   .details {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
-  /* line 604, src/sass/components/page.scss */
+  /* line 694, src/sass/components/page.scss */
   .details .details-btn {
     background: #e9eaec;
     border: none;
     outline: none;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
   }
-  /* line 611, src/sass/components/page.scss */
+  /* line 706, src/sass/components/page.scss */
   section.slider-top div.panel-right {
     top: 107px;
     right: 50%;
   }
-  /* line 614, src/sass/components/page.scss */
+  /* line 709, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box {
     padding: 0 0;
     margin: 0;
     height: 0;
     width: 0;
   }
-  /* line 620, src/sass/components/page.scss */
+  /* line 715, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     background: lightgrey;
     margin: 0;
     padding: 10px 0;
     width: 190px;
   }
-  /* line 625, src/sass/components/page.scss */
+  /* line 720, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button .chosen {
     -webkit-transform: rotate(270deg);
             transform: rotate(270deg);
     padding: 0px 0px;
+    display: none;
   }
-  /* line 630, src/sass/components/page.scss */
+  /* line 726, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .active {
     height: 75px;
     top: 15px;
   }
-  /* line 637, src/sass/components/page.scss */
+  /* line 733, src/sass/components/page.scss */
   section.slider-top div.panel-right .btn-2 {
     top: 0;
     left: 88%;
   }
-  /* line 643, src/sass/components/page.scss */
+  /* line 739, src/sass/components/page.scss */
   div.info {
     display: block;
     width: 91%;
@@ -853,27 +1002,27 @@ section.form div.form-box .contact-form input:hover {
     transform: translateX(-4.4%);
     padding-right: 10px;
   }
-  /* line 651, src/sass/components/page.scss */
+  /* line 747, src/sass/components/page.scss */
   div.info img {
     max-width: 100%;
     float: left;
     height: auto;
     padding-right: 10px;
-    width: 23%;
+    width: 20%;
     margin-top: 2%;
     margin-left: 2%;
   }
-  /* line 660, src/sass/components/page.scss */
+  /* line 756, src/sass/components/page.scss */
   div.info div {
     padding-top: 4%;
     height: 240px;
     text-align: right;
   }
-  /* line 666, src/sass/components/page.scss */
+  /* line 762, src/sass/components/page.scss */
   .grey-wrap {
     background: none;
   }
-  /* line 668, src/sass/components/page.scss */
+  /* line 764, src/sass/components/page.scss */
   .grey-wrap .owl-nav {
     width: 300px;
     height: 100px;
@@ -885,11 +1034,11 @@ section.form div.form-box .contact-form input:hover {
     font-size: 18px;
     font-weight: bold;
   }
-  /* line 680, src/sass/components/page.scss */
+  /* line 776, src/sass/components/page.scss */
   section.form {
     margin-top: 80px;
   }
-  /* line 682, src/sass/components/page.scss */
+  /* line 778, src/sass/components/page.scss */
   section.form img {
     position: absolute;
     top: 74.7%;
@@ -898,7 +1047,7 @@ section.form div.form-box .contact-form input:hover {
     transform: translateX(-50%);
     z-index: -1;
   }
-  /* line 691, src/sass/components/page.scss */
+  /* line 787, src/sass/components/page.scss */
   .owl-nav {
     right: 50%;
     z-index: 99999;
@@ -906,9 +1055,9 @@ section.form div.form-box .contact-form input:hover {
     text-align: center;
     display: inline-block;
   }
-  /* line 697, src/sass/components/page.scss */
+  /* line 793, src/sass/components/page.scss */
   .owl-nav .owl-next {
-    right: 4%;
+    left: 4%;
     position: absolute;
     top: 31%;
     z-index: 99999;
@@ -916,245 +1065,335 @@ section.form div.form-box .contact-form input:hover {
     padding: 10px;
     width: 110px;
   }
-  /* line 705, src/sass/components/page.scss */
+  /* line 801, src/sass/components/page.scss */
   .owl-nav .owl-next img {
     padding-left: 10%;
   }
-  /* line 709, src/sass/components/page.scss */
+  /* line 804, src/sass/components/page.scss */
+  .owl-nav .owl-next img.fliped {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  /* line 808, src/sass/components/page.scss */
   .owl-nav .owl-prev {
     position: absolute;
     top: 31%;
-    left: 4%;
+    right: 4%;
     padding: 10px;
     z-index: 99999;
     width: 110px;
     background: white;
   }
-  /* line 717, src/sass/components/page.scss */
+  /* line 816, src/sass/components/page.scss */
   .owl-nav .owl-prev img {
     padding-left: 10%;
   }
-  /* line 720, src/sass/components/page.scss */
+  /* line 819, src/sass/components/page.scss */
   .owl-nav .owl-prev img.fliped {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
-  /* line 725, src/sass/components/page.scss */
+  /* line 824, src/sass/components/page.scss */
   .house-info {
     position: absolute;
-    top: 6%;
-    left: 1%;
+    top: 11%;
+    right: 10%;
     z-index: 99999;
+    -webkit-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+    font-family: Rubik;
   }
-  /* line 731, src/sass/components/page.scss */
+  /* line 836, src/sass/components/page.scss */
   .btn-submit {
     margin-right: 3%;
   }
 }
 
 @media screen and (max-width: 995px) {
-  /* line 737, src/sass/components/page.scss */
+  /* line 842, src/sass/components/page.scss */
   section.form img {
     top: 71.5%;
   }
-  /* line 741, src/sass/components/page.scss */
+  /* line 850, src/sass/components/page.scss */
+  .mobile-nav .btn-2 {
+    margin-left: -450px;
+  }
+  /* line 855, src/sass/components/page.scss */
+  .mobile-nav .active {
+    background: lightgrey;
+  }
+  /* line 862, src/sass/components/page.scss */
   .owl-nav .owl-prev {
     top: 31%;
   }
-  /* line 744, src/sass/components/page.scss */
+  /* line 865, src/sass/components/page.scss */
   .owl-nav .owl-next {
     top: 31%;
   }
 }
 
+@media screen and (max-width: 992px) {
+  /* line 871, src/sass/components/page.scss */
+  .house-info {
+    top: 11%;
+    right: 17.5%;
+    width: 65%;
+  }
+}
+
 @media screen and (max-width: 950px) {
-  /* line 752, src/sass/components/page.scss */
+  /* line 879, src/sass/components/page.scss */
   section.form img {
     top: 70%;
   }
-  /* line 755, src/sass/components/page.scss */
+  /* line 882, src/sass/components/page.scss */
   div.info div {
     height: 220px;
   }
-  /* line 759, src/sass/components/page.scss */
+  /* line 886, src/sass/components/page.scss */
   .owl-nav .owl-prev {
     top: 31%;
   }
-  /* line 762, src/sass/components/page.scss */
+  /* line 889, src/sass/components/page.scss */
   .owl-nav .owl-next {
     top: 31%;
   }
 }
 
 @media screen and (max-width: 945px) {
-  /* line 768, src/sass/components/page.scss */
+  /* line 895, src/sass/components/page.scss */
   section.form img {
     top: 68%;
   }
 }
 
 @media screen and (max-width: 850px) {
-  /* line 773, src/sass/components/page.scss */
+  /* line 900, src/sass/components/page.scss */
   div.info div {
     height: 200px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* line 778, src/sass/components/page.scss */
+  /* line 905, src/sass/components/page.scss */
   section.form img {
     top: 64.5%;
+  }
+  /* line 908, src/sass/components/page.scss */
+  .house-info {
+    top: 13%;
+    right: 20%;
+    width: 60%;
+  }
+  /* line 918, src/sass/components/page.scss */
+  .mobile-nav .btn-2 {
+    margin-left: -250px;
+  }
+  /* line 923, src/sass/components/page.scss */
+  .mobile-nav .active {
+    background: lightgrey;
   }
 }
 
 @media screen and (max-width: 750px) {
-  /* line 783, src/sass/components/page.scss */
+  /* line 931, src/sass/components/page.scss */
   div.info div {
     height: 180px;
   }
-  /* line 787, src/sass/components/page.scss */
+  /* line 935, src/sass/components/page.scss */
   .owl-nav .owl-prev {
     top: 27%;
   }
-  /* line 790, src/sass/components/page.scss */
+  /* line 938, src/sass/components/page.scss */
   .owl-nav .owl-next {
     top: 27%;
   }
 }
 
 @media screen and (max-width: 650px) {
-  /* line 796, src/sass/components/page.scss */
+  /* line 944, src/sass/components/page.scss */
   section.form img {
     top: 63%;
   }
-  /* line 799, src/sass/components/page.scss */
+  /* line 947, src/sass/components/page.scss */
   div.info div {
     height: 160px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* line 804, src/sass/components/page.scss */
+  /* line 952, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     height: 55px;
     width: 125px;
     text-align: center;
   }
-  /* line 810, src/sass/components/page.scss */
-  section.slider-top div.panel-right .grey-box a .button span {
-    font-size: 18px;
-  }
-  /* line 814, src/sass/components/page.scss */
+  /* line 965, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button img {
     width: 20%;
   }
-  /* line 822, src/sass/components/page.scss */
+  /* line 973, src/sass/components/page.scss */
   section.form div.form-box .contact-form span {
     display: block;
     width: 98%;
   }
-  /* line 825, src/sass/components/page.scss */
+  /* line 976, src/sass/components/page.scss */
   section.form div.form-box .contact-form span input {
     width: 100%;
   }
-  /* line 829, src/sass/components/page.scss */
+  /* line 980, src/sass/components/page.scss */
   section.form div.form-box .contact-form input {
     margin-right: 0;
     width: 98%;
   }
-  /* line 836, src/sass/components/page.scss */
+  /* line 987, src/sass/components/page.scss */
   .house-info {
     position: absolute;
-    top: 10%;
-    left: 1%;
     z-index: 99999;
   }
-  /* line 843, src/sass/components/page.scss */
+  /* line 994, src/sass/components/page.scss */
   .owl-nav .owl-prev {
     top: 24%;
   }
-  /* line 846, src/sass/components/page.scss */
+  /* line 997, src/sass/components/page.scss */
   .owl-nav .owl-next {
     top: 24%;
   }
 }
 
 @media screen and (max-width: 550px) {
-  /* line 852, src/sass/components/page.scss */
+  /* line 1003, src/sass/components/page.scss */
   div.info div {
     height: 160px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  /* line 857, src/sass/components/page.scss */
+  /* line 1008, src/sass/components/page.scss */
+  span.plus {
+    bottom: 7px;
+  }
+  /* line 1012, src/sass/components/page.scss */
+  .mobile-nav .btn-1 {
+    margin-top: 5%;
+    padding: 1% 5px 5px;
+  }
+  /* line 1016, src/sass/components/page.scss */
+  .mobile-nav .btn-2 {
+    margin-top: 5%;
+    padding: 1% 5px 5px;
+  }
+  /* line 1024, src/sass/components/page.scss */
+  .details .details-btn {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+  /* line 1031, src/sass/components/page.scss */
   section.form {
     margin-top: 50px;
   }
-  /* line 859, src/sass/components/page.scss */
+  /* line 1033, src/sass/components/page.scss */
   section.form img {
     top: 60.5%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  /* line 868, src/sass/components/page.scss */
+  /* line 1042, src/sass/components/page.scss */
   header .logo img {
     width: 80%;
   }
-  /* line 876, src/sass/components/page.scss */
+  /* line 1052, src/sass/components/page.scss */
+  .mobile-nav .btn-2 {
+    margin-left: -150px;
+  }
+  /* line 1057, src/sass/components/page.scss */
+  .mobile-nav .active {
+    background: lightgrey;
+  }
+  /* line 1064, src/sass/components/page.scss */
+  .details {
+    top: 12%;
+    left: unset;
+    right: 0;
+  }
+  /* line 1076, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     width: 140px;
   }
-  /* line 878, src/sass/components/page.scss */
+  /* line 1078, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button span {
     font-size: 16px;
   }
-  /* line 879, src/sass/components/page.scss */
+  /* line 1079, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button img {
     width: 30%;
   }
-  /* line 881, src/sass/components/page.scss */
+  /* line 1081, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .active {
     height: 55px;
   }
-  /* line 888, src/sass/components/page.scss */
+  /* line 1088, src/sass/components/page.scss */
   section.form img {
     top: 60.5%;
   }
-  /* line 892, src/sass/components/page.scss */
+  /* line 1092, src/sass/components/page.scss */
   .owl-nav .owl-prev {
-    top: 22%;
+    top: 25%;
   }
-  /* line 895, src/sass/components/page.scss */
+  /* line 1095, src/sass/components/page.scss */
   .owl-nav .owl-next {
-    top: 22%;
+    top: 25%;
   }
 }
 
 @media screen and (max-width: 380px) {
-  /* line 902, src/sass/components/page.scss */
+  /* line 1105, src/sass/components/page.scss */
+  .mobile-nav .btn-2 {
+    margin-left: -100px;
+  }
+  /* line 1110, src/sass/components/page.scss */
+  .mobile-nav .active {
+    background: lightgrey;
+  }
+  /* line 1116, src/sass/components/page.scss */
+  .mobile-nav .active span {
+    font-size: 16px;
+  }
+  /* line 1121, src/sass/components/page.scss */
   header .logo img {
     width: 80%;
   }
-  /* line 910, src/sass/components/page.scss */
+  /* line 1129, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button {
     width: 120px;
   }
-  /* line 912, src/sass/components/page.scss */
+  /* line 1131, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button span {
     font-size: 16px;
   }
-  /* line 913, src/sass/components/page.scss */
+  /* line 1132, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .button img {
     width: 30%;
   }
-  /* line 915, src/sass/components/page.scss */
+  /* line 1134, src/sass/components/page.scss */
   section.slider-top div.panel-right .grey-box a .active {
     height: 55px;
   }
-  /* line 922, src/sass/components/page.scss */
+  /* line 1141, src/sass/components/page.scss */
   section.form img {
     top: 60.5%;
+  }
+  /* line 1145, src/sass/components/page.scss */
+  .owl-nav .owl-prev {
+    top: 22%;
+  }
+  /* line 1148, src/sass/components/page.scss */
+  .owl-nav .owl-next {
+    top: 22%;
   }
 }

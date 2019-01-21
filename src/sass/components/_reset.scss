@@ -2,6 +2,9 @@
 html {
   margin: 0 !important;
 }
+h1,h2,h3,h4,h5,h6{
+  font-family:Rubik,sans-serif;
+}
 body {
   position: relative;
   margin: 0;
@@ -10,6 +13,7 @@ body {
   font-size: 25px;
   color: #232323;
 }
+
 
 a {
   text-decoration: none;
@@ -27,11 +31,17 @@ a {
 p {
   margin: 0;
 }
+div{
+  font-family: Rubik,sans-serif;
+}
 ul {
   -webkit-padding-start: 0;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+input{
+  font-family:Rubik,sans-serif !important;
 }
 section {
   width: 100%;
@@ -53,6 +63,49 @@ a:active,a:hover,a:visited{
   padding:30px;
   font-weight:bold;
 }
+.owl-wrapper-outer {
+  -webkit-transform-style: preserve-3d;
+}
+span.plus {
+  transform: translateY(-82%);
+  bottom: 2px;
+  right: -1px;
+  position: relative;
+}
+.mobile-nav {
+  display:flex;
+  justify-content: space-between;
+  flex-flow:row-reverse;
+  max-width: 100%;
+
+
+  .btn-1{
+    background: #e9eaec;
+    padding:5px 10px 0 10px;
+    //margin-right: 40%;
+    span{
+      font-size:16px;
+    }
+  }
+  .btn-2{
+    background:#e9eaec;
+    //margin-right:20px;
+    padding:5px 10px 0 10px;
+    margin-left: -650px;
+    span{
+      font-size:16px;
+    }
+  }
+  .active{
+    background:lightgrey;
+    //height:90px;
+    span{
+      //font-size: 30px;
+      //font-weight: bold;
+    }
+
+  }
+}
 .img-thanks{
  top:85% !important;
 }
@@ -71,6 +124,9 @@ a:visited{
 }
 .mobile{
   display: none;
+}
+.form-title{
+  font-family: Rubik,sans-serif;
 }
 @media screen and(max-width:1000px){
   .mobile{
