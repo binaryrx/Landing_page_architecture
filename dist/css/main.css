@@ -80,37 +80,48 @@ a:active, a:hover, a:visited {
 }
 
 /* line 52, src/sass/components/_reset.scss */
+.thanks {
+  padding: 30px;
+  font-weight: bold;
+}
+
+/* line 56, src/sass/components/_reset.scss */
+.img-thanks {
+  top: 85% !important;
+}
+
+/* line 59, src/sass/components/_reset.scss */
 a {
   color: #333333;
 }
 
-/* line 55, src/sass/components/_reset.scss */
+/* line 62, src/sass/components/_reset.scss */
 a:visited {
   color: #333333;
 }
 
-/* line 58, src/sass/components/_reset.scss */
+/* line 65, src/sass/components/_reset.scss */
 .alert {
   display: none;
 }
 
-/* line 62, src/sass/components/_reset.scss */
+/* line 69, src/sass/components/_reset.scss */
 .sticky {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
           box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
 }
 
-/* line 65, src/sass/components/_reset.scss */
+/* line 72, src/sass/components/_reset.scss */
 .mobile {
   display: none;
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 69, src/sass/components/_reset.scss */
+  /* line 76, src/sass/components/_reset.scss */
   .mobile {
     display: block;
   }
-  /* line 72, src/sass/components/_reset.scss */
+  /* line 79, src/sass/components/_reset.scss */
   .desktop {
     display: none;
   }
