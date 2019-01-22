@@ -72,7 +72,10 @@
 			<img src="images/architect/6.jpg" alt="" class="slide-6">
 		</div>
 </section>
-
+<div class="house-info">בית במרכז הארץ, סגנון ירושלמי
+	שטח מגרש: 750 מ”ר
+	שטח בנוי: 600 מ”ר
+	צלם: שי אפשטיין</div>
 <section class="form">
 	<img src="images/architects.png" alt="" class="img-fluid">
 	<div class="form-box">
@@ -115,7 +118,7 @@ $(document).ready(function ($) {
 		dots: false,
 		autoplay: true,
 		autoplayHoverPause: false,
-		navText: ['הבא','קודם'],
+		navText: ['הבא','הקודם'],
 		startPosition:'right'
 
 	});
@@ -133,12 +136,12 @@ $(document).ready(function ($) {
 			// });0
 	});
 
-	$('.house-info').animate({opacity:0},250,function(){
-		$('.house-info').animate({opacity:1},500);
-	});
 
 
-	$('.house-info').toggleClass('show').insertAfter('.slider-top');
+
+	$('.house-info').toggleClass('show none').insertAfter('.slider-top');
+	$('.house-info').css('display','none');
+
 	$('.btn-1').click(function(e){
 		$('#internal-design').removeClass('used');+
 		$('#architect').addClass('used');
@@ -184,17 +187,19 @@ $(document).ready(function ($) {
 	$('.owl-prev').prepend('<img src="images/arrow-right.png" />');
 	$('.owl-nav').wrap('<div class="grey-wrap"></div>');
 	$('.grey-wrap').append('<div class="details">' +
-			'<button class="details-btn"><span class="hide">פרטים</span> <span class="plus">+</span></button><div class="house-info">בית במרכז הארץ, סגנון ירושלמי\n' +
-			'שטח מגרש: 750 מ”ר\n' +
-			'שטח בנוי: 600 מ”ר\n' +
-			'צלם: שי אפשטיין</div></div>');
+			'<button class="details-btn"><span class="hide">פרטים</span> <span class="plus">+</span></button></div>');
 
     checkPosition();
     window.addEventListener('resize', checkPosition);
     $('.details-btn').click(function(){
-    	$('.house-info').toggleClass('show').insertAfter('.slider-top');
+    	// $('.house-info').toggleClass('show')
+		// $('.house-info').removeClass('none');
+
+
+		$('.house-info').slideToggle();
     	$('.plus').html('-');
-    	if($('.house-info').hasClass('show')){
+    	$('.house-info').toggleClass('open');
+    	if($('.house-info').hasClass('open')){
 			$('.plus').html('-');
 		}else{
 			$('.plus').html('+');
@@ -230,7 +235,9 @@ function checkPosition() {
         $('.owl-nav').appendTo('.slider-top');
         $('.details').appendTo('.mobile-nav');
         $('.button').appendTo('.mobile-nav');
-
+		$('.details-btn').click(function(){
+			$('.house-info').insertAfter('.owl-stage-outer');
+		});
 
     } else {
         //
